@@ -39,5 +39,3 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh
 COPY --chown=cnde:cnde .zshrc .
 RUN sudo chown -R cnde .
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ; ~/.fzf/install
-
-WORKDIR /home/cnde
