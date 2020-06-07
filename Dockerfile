@@ -2,6 +2,9 @@ FROM eu.gcr.io/cloud-native-coding/theia-example:latest
 
 USER root
 
+ENV DEBIAN_FRONTEND "noninteractive" 
+ENV TZ Europe/Zurich
+
 RUN apt-get update; \
     apt-get install -y apt-transport-https ca-certificates gnupg-agent software-properties-common; \
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -; \
